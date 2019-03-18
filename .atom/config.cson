@@ -1,0 +1,96 @@
+"*":
+  "activate-power-mode":
+    comboMode:
+      enabled: false
+      multiplier: false
+    plugins:
+      playAudio: false
+      screenShake: false
+    screenShake:
+      enabled: false
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+    "atom-ide-debugger":
+      showDebuggerOnBpSet: false
+    "atom-ide-terminal":
+      fontFamily: "Fira Code"
+  "autocomplete-plus":
+    minimumWordLength: 0
+  autosave:
+    enabled: true
+  "bracket-matcher":
+    highlightMatchingLineNumber: true
+  core:
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "welcome"
+      "package-generator"
+      "open-on-github"
+      "metrics"
+      "language-toml"
+      "language-ruby-on-rails"
+      "language-ruby"
+      "language-python"
+      "language-perl"
+      "language-objective-c"
+      "language-mustache"
+      "language-make"
+      "language-less"
+      "language-java"
+      "language-go"
+      "language-csharp"
+      "language-coffee-script"
+      "language-clojure"
+      "language-c"
+      "autocomplete-atom-api"
+      "dev-live-reload"
+      "autoclose-html"
+      "ide-bash"
+      "ide-css"
+      "ide-html"
+      "ide-json"
+      "ide-typescript"
+      "php-twig"
+      "fold-comments"
+      "fold-functions"
+      "styleguide"
+      "about"
+      "archive-view"
+      "encoding-selector"
+      "line-ending-selector"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontFamily: "Fira Code"
+    lineHeight: 3
+    preferredLineLength: 120
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "ca52dcb5-c919-4ffc-87a9-d4f9336942ec"
+  "file-icons":
+    coloured: false
+    onChanges: true
+  "fold-comments":
+    autofold: true
+  "fold-functions":
+    autofold: false
+  "git-diff": {}
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  "one-dark-ui":
+    fontSize: 14
+  "spell-check": {}
+  "status-bar": {}
+  tabs:
+    enableVcsColoring: true
+  "tree-view":
+    alwaysOpenExisting: true
+    autoReveal: true
+  welcome:
+    showOnStartup: false

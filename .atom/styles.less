@@ -1,0 +1,392 @@
+@import (reference) "syntax-variables";
+@import (reference) "ui-variables";
+
+// Slight animation of panels
+.atom-dock-inner{
+    &:not(.atom-dock-open){
+        position:relative;
+    }
+    & .atom-dock-mask,
+    & .atom-dock-content-wrapper{
+        transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
+    }
+}
+
+// Hide panels toggle buttons
+.atom-dock-toggle-button{
+    display:none;
+}
+
+// Slight dim on icons and fix directory alignement
+.list-group,
+.list-tree {
+    .icon {
+        &::before {
+            opacity: 0.6;
+        }
+        &.icon-file-directory::before{
+            top:-2px;
+        }
+    }
+}
+
+// Space up tree view items and make them darker
+.list-group,
+.list-tree {
+    &.entries {
+        li {
+            color: darken(@text-color, 15%);
+            &.list-item,
+            &.list-nested-item > .list-item {
+                height:2.2rem;
+                line-height:2.2rem;
+            }
+        }
+    }
+    & .selected::before{
+        height:2.2rem;
+        line-height:2.2rem;
+    }
+}
+
+// Subtle animation on hover and indicate clickable
+.tree-view {
+    li.file, .header.list-item {
+        cursor:pointer;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+            filter: brightness(1.3);
+        }
+    }
+}
+
+// horizontal indicator on current tab
+atom-pane-axis > atom-pane.active .tab.active:before,
+atom-pane-container > atom-pane.pane .tab.active:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+
+// Flat tabs, indicate clickable
+.tab-bar {
+    height:3rem;
+    box-shadow:none;
+    .tab{
+        cursor:pointer;
+        max-width:250px;
+        height:3rem;
+        line-height:3rem;
+        background:transparent;
+        border:none;
+        box-shadow:none;
+        transition: background 0.15s ease-in-out;
+        &:hover{
+            background: @tab-background-color-active;
+        }
+        & + .tab{
+            margin-left:2px
+        }
+        &.active,
+        &:last-of-type,
+        &.active:last-of-type{
+            max-width:250px;
+            box-shadow:none;
+        }
+    }
+}
+
+// Make the modified dot a donut
+.tab-bar {
+    .tab{
+        &.modified:not(:hover) .close-icon{
+            border:2px solid @accent-color;
+            border-radius:100%;
+            font-size:6px;
+            color:transparent;
+            top: 1.15rem;
+            right: 1.15rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+// Fix close button position
+.tab-bar {
+    .tab{
+        .close-icon {
+            top: 0.75rem;
+            right: 0.75rem;
+            line-height: 1.5rem;
+            cursor:pointer;
+            &::before {
+                font-size: 1em;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+atom-text-editor {
+
+    // Use fancy italic on comments and language entities/modifiers
+    .comment,
+    .syntax--comment:not(.syntax--whitespace),
+    .syntax--punctuation.syntax--definition.syntax--comment,
+    .syntax--entity.syntax--other.syntax--attribute-name,
+    .syntax--type.syntax--function,
+    .syntax--type.syntax--var,
+    .syntax--meta.syntax--parameters,
+    .syntax--keyword.syntax--control,
+    .syntax--keyword.syntax--new,
+    .syntax--modifier,
+    .syntax--storage,
+    .syntax--italic,
+    .syntax--language,
+    .syntax--boolean,
+    .syntax--null,
+    .syntax--this,
+    .syntax--doctype {
+        font-family: "Dank Mono";
+        font-style : italic;
+        font-size  : 1.15em;
+        line-height: 1;
+    }
+
+    // Make functions names a little bolder
+    .syntax--entity.syntax--name.syntax--function {
+        font-weight: 500;
+    }
+
+    // Show a dotted line underneath folded lines, indicate clickable action
+    .line-number.foldable .icon-right {
+        cursor: pointer;
+    }
+    .fold-marker {
+        cursor: pointer;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-bottom: 1px dashed @syntax-invisible-character-color;
+        }
+    }
+
+    // Highlights trailing whitespace except on the cursor line
+    .line:not(.cursor-line) {
+        .trailing-whitespace {
+            background-color: @background-color-error;
+            color: contrast(@background-color-error);
+        }
+    }
+
+    // Highlight current line with more light
+    .line.cursor-line{
+        // background: transparent !important;
+        filter: brightness(1.3);
+    }
+
+    // Reduce line-number font-size except current line and bracket match
+    .line-number {
+        font-size: 0.7em;
+        line-height: 4.3em;
+        &.cursor-line,
+        &.bracket-matcher{
+            font-size: 1em;
+            line-height: 3em;
+        }
+    }
+    .line-number.bracket-matcher.bracket-matcher {
+        background-color: transparent;
+    }
+
+    // Add git indicators on right, not left
+    .gutter .line-number {
+        &.git-line-modified {
+            border-right: 2px solid @syntax-color-modified;
+            padding-right: ~"calc(0.5em - 2px)";
+            border-left: none;
+            padding-left: 0;
+        }
+        &.git-line-added {
+            border-right: 2px solid @syntax-color-added;
+            padding-right: ~"calc(0.5em - 2px)";
+            border-left: none;
+            padding-left: 0;
+        }
+    }
+
+    // Makes the cursor pulse instead of blink
+    .cursor {
+        transition: opacity 0.35s;
+    }
+}
+
+atom-workspace {
+    // Make text easier on the eyes.
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    // Turn off ligatures in strings and regexp.
+    .syntax--string.syntax--quoted,
+    .syntax--string.syntax--regexp {
+        -webkit-font-feature-settings: "liga" off, "calt" off;
+        font-style:normal;
+    }
+
+    // Show invisibles only in selection.
+    .invisible-character {
+        color: @syntax-background-color;
+        &.indent-guide {
+            box-shadow: inset 1px 0 0 0 @syntax-indent-guide-color;
+        }
+    }
+    .cursor-line .invisible-character {
+        color: transparent;
+    }
+
+    // Remove black borders
+    .atom-dock-inner.atom-dock-open.left,
+    .atom-dock-inner.atom-dock-open.right,
+    atom-pane-container atom-pane,
+    atom-panel{
+        border:none;
+    }
+}
+
+// Remove black borders on buttons and other ui elements
+.btn,
+.btn.btn-default,
+.btn-group > .btn:last-child,
+.btn-group > .btn.selected:last-child,
+.btn-group > .btn:first-child,
+.btn-group > .btn,
+.settings-view .config-menu,
+.settings-view .package-card,
+.settings-view .alert-info,
+.settings-view .config-menu{
+    border:none;
+}
+
+// Make tables rows like keybindings more readable
+tr{
+    td{
+        border:none !important;
+    }
+    &:nth-child(even){
+        background:darken(@level-2-color, 1%);
+    }
+    &:hover {
+        color:lighten(@text-color, 15%);
+        background: @level-1-color;
+    }
+}
+
+// Decrease status bar size
+.status-bar {
+    font-size: 12px;
+    letter-spacing:0.2px;
+}
+
+// Decrease tooltips size
+.tooltip {
+    font-size: 12px;
+    letter-spacing:0.2px;
+    .tooltip-inner {
+        padding: 0.5rem @ui-padding*.65;
+    }
+}
+
+// package indent-guide-improved: highlight current block indentation
+.indent-guide-improved {
+    background-color: @syntax-indent-guide-color;
+    filter: brightness(0.5); //Not active block slighty dimmed
+    &.indent-guide-stack {
+        background-color: @syntax-indent-guide-color;
+        filter: brightness(1); //Active block use default
+        &.indent-guide-active {
+            background-color: @syntax-indent-guide-color;
+            filter: brightness(1.7); //Highlight active guide
+        }
+    }
+}
+
+// Flat Ctrl+[maj]+P
+atom-panel.modal {
+    padding: 20px;
+    &.from-top {
+        top: 20vh;
+        & .tree-view-dialog label{
+            margin-bottom:40px;
+        }
+    }
+    & .select-list ol.list-group,
+    &.select-list ol.list-group,
+    & .select-list ol.list-group li,
+    &.select-list ol.list-group li{
+        border:none;
+    }
+    select-list .key-binding{
+        opacity: 0.8;
+        font-size: 12px;
+    }
+    & .command-palette,
+    & .select-list ol.list-group{
+        background:transparent;
+        padding:0;
+    }
+}
+
+
+
+.overlay,
+atom-panel.modal {
+    ::-webkit-scrollbar {
+        &-track {
+            background: transparent;
+        }
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        border: 3px solid transparent;
+    }
+    .select-list ol.list-group{
+        margin:-20px;
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini].editor {
+        font-family: @font-family;
+        background: @input-background-color;
+        box-shadow: none;
+        font-size: 1.5rem;
+        line-height: 3rem;
+        margin: -20px;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        &.is-focused {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+// inputs
+atom-text-editor[mini] {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border: none;
+    padding: 10px 15px;
+}
+
+// selects
+.settings-view select.form-control{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: auto;
+    border: none;
+    padding: 10px 20px;
+}
