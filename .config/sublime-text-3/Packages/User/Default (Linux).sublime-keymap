@@ -1,0 +1,3 @@
+[
+    { "keys": ["alt+k"], "command": "toggle_side_bar" },
+]
