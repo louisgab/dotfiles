@@ -1,0 +1,37 @@
+{
+    "com.github.ulauncher.ulauncher-emoji": {
+        "id": "com.github.ulauncher.ulauncher-emoji",
+        "url": "https://github.com/Ulauncher/ulauncher-emoji",
+        "updated_at": "2019-10-06T21:28:38.444288",
+        "last_commit": "4734455e255a401ff7507192386ed62361cb3748",
+        "last_commit_time": "2019-05-20T18:00:00"
+    },
+    "com.github.ulauncher.ulauncher-timer": {
+        "id": "com.github.ulauncher.ulauncher-timer",
+        "url": "https://github.com/Ulauncher/ulauncher-timer",
+        "updated_at": "2019-10-06T21:29:26.586144",
+        "last_commit": "1267b5997ca797b85136cf325bcf4a51e2f7adf7",
+        "last_commit_time": "2019-09-25T06:44:20"
+    },
+    "com.github.ulauncher.ulauncher-kill": {
+        "id": "com.github.ulauncher.ulauncher-kill",
+        "url": "https://github.com/Ulauncher/ulauncher-kill",
+        "updated_at": "2019-10-06T21:30:26.510226",
+        "last_commit": "d296e6c84b4c1e28bfc8fbb41f7f7bdf0240a76e",
+        "last_commit_time": "2019-05-21T16:14:35"
+    },
+    "com.github.brpaz.ulauncher-statuspages": {
+        "id": "com.github.brpaz.ulauncher-statuspages",
+        "url": "https://github.com/brpaz/ulauncher-statuspages",
+        "updated_at": "2019-10-06T21:44:21.895511",
+        "last_commit": "8dccb4d34d1b842d820606727bd5353cc715e9e0",
+        "last_commit_time": "2019-06-22T16:08:47"
+    },
+    "com.github.iboyperson.ulauncher-system": {
+        "id": "com.github.iboyperson.ulauncher-system",
+        "url": "https://github.com/iboyperson/ulauncher-system",
+        "updated_at": "2019-10-06T21:44:55.037653",
+        "last_commit": "34a4776fcdf8be9b22d524b98631298efe668fb9",
+        "last_commit_time": "2019-09-17T20:03:39"
+    }
+}
