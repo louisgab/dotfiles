@@ -1,9 +1,6 @@
 {
     "breadcrumbs.enabled": true,
-    "breadcrumbs.filePath": "on",
-    "breadcrumbs.symbolPath": "off",
-    "breadcrumbs.icons": false,
-    "editor.fontFamily": "'Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Cascadia Code', 'Fira Code', monospace",
     "editor.renderWhitespace": "selection",
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingOvertype": "always",
@@ -17,13 +14,13 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 5000,
     "editor.formatOnPaste": true,
-    "editor.letterSpacing": -0.2,
     "editor.fontWeight": "500",
     "editor.rulers": [
         80,
         120
     ],
     "editor.cursorWidth": 4,
+    "editor.scrollBeyondLastLine": false,
     "explorer.autoReveal": true,
     "explorer.openEditors.visible": 0,
     "files.autoSave": "onWindowChange",
@@ -34,8 +31,8 @@
     "git.autofetch": true,
     "git.autoStash": true,
     "git.fetchOnPull": true,
+    "git.confirmSync": false,
     "git.showPushSuccessNotification": true,
-    "search.location": "panel",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "window.menuBarVisibility": "toggle",
@@ -75,7 +72,6 @@
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorBlinking": true,
     // Extensions
-    "blade.format.enable": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "emmet.includeLanguages": {
         "blade.php": "html",
@@ -88,6 +84,11 @@
     "material-icon-theme.saturation": 0.8,
     "material-icon-theme.showWelcomeMessage": false,
     "material-icon-theme.showReloadMessage": false,
+    "oneDarkPro.bold": true,
+    "oneDarkPro.italic": true,
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.allowRisky": true,
+    "php.suggest.basic": false,
     "projectManager.sortList": "Path",
     "projectManager.groupList": true,
     "projectManager.filterOnFullPath": true,
@@ -96,17 +97,39 @@
         "/home/louis-gabriel/Documents/Projects",
         "/home/louis-gabriel/Documents/@WebAtomic"
     ],
+    "sqltools.autoOpenSessionFiles": false,
+    "sqltools.autoConnectTo": "devilbox",
+    "sqltools.telemetry": false,
     "sqltools.connections": [
         {
-            "askForPassword": false,
-            "database": "mysql",
-            "dialect": "MySQL",
-            "isActive": false,
-            "isConnected": false,
             "name": "devilbox",
-            "port": 3306,
             "server": "172.16.238.12",
-            "username": "root"
+            "port": 3306,
+            "username": "root",
+            "database": "dev",
+            "password": "",
+            "askForPassword": false,
+            "dialect": "MySQL",
+            "connectionTimeout": 30,
         }
+    ],
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer",
+    },
+    "cSpell.language": "en,fr,en-GB,en-US,fr-FR",
+    "cSpell.enabledLanguageIds": [
+        "css",
+        "git-commit",
+        "html",
+        "javascript",
+        "json",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "scss",
+        "text",
+        "yaml",
+        "yml"
     ]
 }
