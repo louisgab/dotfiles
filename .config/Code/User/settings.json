@@ -1,11 +1,12 @@
 {
-    "breadcrumbs.enabled": true,
-    "editor.fontFamily": "'Cascadia Code', 'Fira Code', monospace",
+    "breadcrumbs.enabled": false,
+    "editor.fontFamily": "'Fira Code', monospace",
     "editor.renderWhitespace": "selection",
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingOvertype": "always",
     "editor.autoClosingQuotes": "always",
-    "editor.autoIndent": true,
+    "editor.autoSurround": "languageDefined",
+    "editor.autoIndent": "full",
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.fontSize": 14,
@@ -15,6 +16,8 @@
     "editor.formatOnSaveTimeout": 5000,
     "editor.formatOnPaste": true,
     "editor.fontWeight": "500",
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 140,
     "editor.rulers": [
         80,
         120
@@ -39,7 +42,7 @@
     "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderShort}${separator}${rootName}",
     "workbench.startupEditor": "none",
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.sideBar.location": "left",
     "workbench.tree.indent": 20,
@@ -77,7 +80,6 @@
         "blade.php": "html",
         "twig": "html"
     },
-    "git-graph.commitDetailsViewLocation": "Docked to Bottom",
     "git-graph.fetchAvatars": true,
     "material-icon-theme.hidesExplorerArrows": true,
     "material-icon-theme.opacity": 0.8,
@@ -93,25 +95,9 @@
     "projectManager.groupList": true,
     "projectManager.filterOnFullPath": true,
     "projectManager.git.baseFolders": [
-        "/home/louis-gabriel/Documents/@Tequila",
-        "/home/louis-gabriel/Documents/Projects",
-        "/home/louis-gabriel/Documents/@WebAtomic"
-    ],
-    "sqltools.autoOpenSessionFiles": false,
-    "sqltools.autoConnectTo": "devilbox",
-    "sqltools.telemetry": false,
-    "sqltools.connections": [
-        {
-            "name": "devilbox",
-            "server": "172.16.238.12",
-            "port": 3306,
-            "username": "root",
-            "database": "dev",
-            "password": "",
-            "askForPassword": false,
-            "dialect": "MySQL",
-            "connectionTimeout": 30,
-        }
+        "/home/louisgab/Documents/@Tequila",
+        "/home/louisgab/Documents/Projects",
+        "/home/louisgab/Documents/Clients"
     ],
     "[php]": {
         "editor.defaultFormatter": "junstyle.php-cs-fixer",
@@ -131,5 +117,9 @@
         "text",
         "yaml",
         "yml"
-    ]
+    ],
+    "git-graph.dateFormat": "Relative",
+    "git-graph.dateType": "Commit Date",
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1580223777742
 }
