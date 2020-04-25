@@ -16,7 +16,9 @@ mechatroner.rainbow-csv
 MehediDracula.php-namespace-resolver
 mhutchie.git-graph
 mikestead.dotenv
+mrmlnc.vscode-apache
 mrmlnc.vscode-scss
+mrorz.language-gettext
 neilding.language-liquid
 octref.vetur
 onecentlin.laravel-blade
@@ -27,5 +29,4 @@ streetsidesoftware.code-spell-checker
 Tyriar.sort-lines
 vscode-icons-team.vscode-icons
 wwm.better-align
-zhuangtongfa.material-theme
 Zignd.html-css-class-completion
