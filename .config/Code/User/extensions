@@ -11,11 +11,14 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 gencer.html-slim-scss-css-class-completion
+iocave.customize-ui
+iocave.monkey-patch
 junstyle.php-cs-fixer
 mechatroner.rainbow-csv
 MehediDracula.php-namespace-resolver
 mhutchie.git-graph
 mikestead.dotenv
+mkxml.vscode-filesize
 mrmlnc.vscode-apache
 mrmlnc.vscode-scss
 mrorz.language-gettext
@@ -26,7 +29,11 @@ patbenatar.advanced-new-file
 pranaygp.vscode-css-peek
 sleistner.vscode-fileutils
 streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-french
 Tyriar.sort-lines
+usernamehw.errorlens
 vscode-icons-team.vscode-icons
+wix.vscode-import-cost
 wwm.better-align
+zhuangtongfa.material-theme
 Zignd.html-css-class-completion
