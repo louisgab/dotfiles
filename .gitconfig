@@ -1,3 +1,22 @@
 [core]
-	autocrlf = input
-	eol = lf
+    autocrlf = input
+    eol = lf
+    editor = nano -w
+[alias]
+    up = pull --rebase --autostash
+[includeIf "gitdir:~/Documents/Projects/**"]
+    path = ~/Documents/Projects/.gitconfig
+[includeIf "gitdir:~/Documents/Clients/**"]
+    path = ~/Documents/Clients/.gitconfig
+[diff]
+    tool = vimdiff
+[color]
+    ui = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    diff = auto
+[log]
+    abbrevCommit = true
+[web]
+    browser = google-chrome
