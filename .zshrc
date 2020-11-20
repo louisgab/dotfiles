@@ -1,8 +1,13 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
-plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting history-substring-search z sudo ubuntu git auto-ls nvm npm composer wp-cli)
+plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting history-substring-search z sudo ubuntu git alias-tips auto-ls nvm npm composer artisan wp-cli)
 source $ZSH/oh-my-zsh.sh
+
+# Larevel Artisan plugin
+ARTISAN_OPEN_ON_MAKE_EDITOR=code
+alias a="artisan"
+alias tinker="artisan tinker"
 
 # Tilix VTE
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
@@ -26,3 +31,5 @@ SPACESHIP_PROMPT_ORDER=(
     exit_code     # Exit code section
     char          # Prompt character
 )
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
