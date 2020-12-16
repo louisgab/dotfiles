@@ -2,7 +2,7 @@
     "breadcrumbs.enabled": true,
     // "diffEditor.codeLens": true,
     "diffEditor.ignoreTrimWhitespace": true,
-    "diffEditor.renderSideBySide": true,
+    "diffEditor.renderSideBySide": false,
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingOvertype": "always",
@@ -11,6 +11,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+    "editor.codeLensFontFamily": "Fira Code",
+    "editor.codeLensFontSize": 11,
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorWidth": 4,
     "editor.fontFamily": "'Cascadia Code', 'Fira Code', monospace",
@@ -127,7 +129,7 @@
     "terminal.integrated.lineHeight": 1.5,
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.colorTheme": "One Dark Pro",
     "workbench.colorCustomizations": {
         // UI from palenight
@@ -201,7 +203,7 @@
         "editorLineNumber.activeForeground": "#eeffff",
         // "editorCursor.foreground": "#7e57c2",
         "editor.selectionBackground": "#7580B850",
-        "editor.selectionHighlightBackground": "#383D51",
+        "editor.selectionHighlightBackground": "#b3b4b9",
         // "editor.inactiveSelectionBackground": "#7e57c25a",
         "editor.wordHighlightBackground": "#32374D",
         "editor.wordHighlightStrongBackground": "#2E3250",
@@ -322,13 +324,14 @@
     "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 2,
+    "workbench.editor.limit.value": 6,
     "workbench.editor.scrollToSwitchTabs": true,
     "workbench.editor.showTabs": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.list.smoothScrolling": true,
     "workbench.preferredDarkColorTheme": "One Dark Pro",
     "workbench.sideBar.location": "right",
+    "editor.highlightActiveIndentGuide": true,
     "workbench.startupEditor": "newUntitledFile",
     // "workbench.tree.indent": 0,
     "workbench.editor.enablePreview": false,
@@ -341,7 +344,6 @@
     "git-graph.openNewTabEditorGroup": "Beside",
     "git-graph.repository.commits.initialLoad": 100,
     "git-graph.repository.onLoad.scrollToHead": true,
-    "gitlens.advanced.telemetry.enabled": false,
     "php-cs-fixer.allowRisky": true,
     "php-cs-fixer.onsave": true,
     "intelephense.stubs": [
@@ -477,6 +479,7 @@
     "customizeUI.font.monospace": "Cascadia Code",
     "customizeUI.font.regular": "Noto Sans",
     "customizeUI.listRowHeight": 26,
+    "customizeUI.activityBar": "bottom",
     "customizeUI.stylesheet": {
         ".mtki": "font-family: 'Operator Mono Ssm' !important; font-weight: 330 !important;"
     },
@@ -510,5 +513,11 @@
     ],
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
-    "vsicons.projectDetection.autoReload": true
+    "vsicons.projectDetection.autoReload": true,
+    "window.autoDetectHighContrast": false,
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "xmlTools.enableXmlTreeViewCursorSync": true,
+    "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
 }
