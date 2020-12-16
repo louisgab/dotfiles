@@ -1,7 +1,7 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
-plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting history-substring-search z sudo ubuntu git alias-tips auto-ls nvm npm composer artisan wp-cli)
+plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting history-substring-search z sudo ubuntu git alias-tips auto-ls nvm npm composer yarn artisan wp-cli)
 source $ZSH/oh-my-zsh.sh
 
 # Larevel Artisan plugin
